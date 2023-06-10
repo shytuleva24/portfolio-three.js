@@ -1,0 +1,44 @@
+.technology-header h2  {
+    font-size: 128rem;
+    line-height: 145rem;
+    letter-spacing: -0.02em;
+}
+.technology-header p {
+    font-weight: 500;
+    font-size: 28rem;
+    line-height: 34rem;
+}
+.flex {
+    justify-content: space-between;
+    align-items: center
+}
+.git a {
+    font-weight: 500;
+    font-size: 32rem;
+    line-height: 39rem;
+    color: white;
+    text-decoration: none;
+}
+.skills {
+    padding: 109rem 0;
+}
+h4 {
+    font-size: 96rem;
+    line-height: 116rem;
+}
+.skill-card {
+    margin-bottom: 40rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+}
+.skill-items {
+    margin: 0 auto;
+    max-width: 70%;
+}
+.skill-card:hover {
+    color: white;
+}
+.skill-card li {
+    font-size: 14rem;
+    line-height: 17rem;
+}

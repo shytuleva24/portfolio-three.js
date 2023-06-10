@@ -1,0 +1,13 @@
+
+
+:root {
+    --white-grad-1: linear-gradient(to top, #000 0%, #0f0f0f 100%);
+}
+.bouncy-balloon, .relative {
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-white-grad-1 {
+    background: var(--white-grad-1);
+}

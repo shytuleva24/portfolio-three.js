@@ -1,0 +1,16 @@
+p {
+    font-weight: 500;
+    font-size: 48rem;
+    line-height: 60rem;
+}
+.education {
+    padding: 109rem 0;
+    max-width: 50%;
+    margin-left: auto;
+}
+
+.education li {
+    font-weight: 500;
+    font-size: 28rem;
+    line-height: 34rem;
+}
