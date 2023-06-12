@@ -73,4 +73,20 @@ img {
     transform: none;
     opacity: 1;
 }
+/* Стили для скролл-бара */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background-color: rgba(241, 241, 241, 0.5); /* Прозрачный фон */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.8);; /* Белый ползунок */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #eee; /* Цвет ползунка при наведении */
+}
