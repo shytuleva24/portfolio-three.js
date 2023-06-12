@@ -4,10 +4,13 @@ h2 {
 }
 .marquee {
     width: 100%;
+    padding-bottom: 71px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+.text-line {
     overflow: hidden;
     white-space: nowrap;
-    padding-bottom: 71px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);;
 }
 .marquee span {
     font-size: 210rem;
@@ -16,7 +19,23 @@ h2 {
     text-transform: uppercase;
     display: inline-block;
     animation: marquee 4s linear infinite;
-    /*text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;*/
+    pointer-events: none;
+}
+.hover-image {
+    position: absolute;
+    max-width: 480rem;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Добавлено свойство transition для плавной анимации */
+    border-radius: 18px;
+    pointer-events: none;
+    transition-timing-function: ease-in-out;
+    will-change: transform;
+}
+
+.marquee:hover .hover-image {
+    opacity: 1;
 }
 
 @keyframes marquee {

@@ -15,47 +15,13 @@
   </div>
 </div>
 <div class="skills">
-  <div class="skill-card scroll-block">
+  <div class="skill-card scroll-block" *ngFor="let block of blocks; let i = index" [ngClass]="{ 'active': block.isActive }" [id]="'block-' + i">
     <div class="wave-text">
-      <h4 class="line">Markup</h4>
+      <h4 class="line" [attr.data-text]="block.title">{{ block.title }}</h4>
     </div>
-      <ul class="skill-items flex wave-text">
-        <li class="line">HTML</li>
-        <li class="line">CSS</li>
-        <li class="line">SASS</li>
-        <li class="line">SCSS</li>
-        <li class="line">PUG</li>
-        <li class="line">BEM</li>
-      </ul>
-  </div>
-  <div class="skill-card scroll-block">
-    <div class="wave-text">
-      <h4 class="line">UI-Frameworks</h4>
-    </div>
-      <ul class="skill-items flex wave-text">
-        <li class="line">Bootstrap 3</li>
-        <li class="line">Bootstrap 4</li>
-        <li class="line">Bootstrap 5</li>
-      </ul>
-  </div>
-  <div class="skill-card scroll-block">
-    <div class="wave-text">
-      <h4 class="line">JavaScript</h4>
-    </div>
-      <ul class="skill-items flex wave-text">
-        <li class="line">Angular</li>
-        <li class="line">Vanilla JS</li>
-        <li class="line">jQuery</li>
-      </ul>
-  </div>
-  <div class="skill-card scroll-block">
-    <div class="wave-text">
-      <h4 class="line">Control Version System</h4>
-    </div>
-      <ul class="skill-items flex wave-text">
-        <li class="line">GitHub</li>
-        <li class="line">Webpack</li>
-        <li class="line">Gulp</li>
-      </ul>
+    <ul class="skill-items flex wave-text">
+      <li class="line" *ngFor="let skill of block.skills" [attr.data-text]="skill">{{ skill }}</li>
+    </ul>
   </div>
 </div>
+

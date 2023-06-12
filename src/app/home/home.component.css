@@ -18,7 +18,7 @@
     line-height: 120%;
     text-transform: uppercase;
     color: white;
-    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4)
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2)
 }
 @media (max-width: 1148px) {
     h1 {
@@ -42,7 +42,7 @@ a {
     font-size: 1.9vw;
     line-height: 3vw;
     letter-spacing: -0.04em;
-    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4)
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2)
 }
 .wave-text-home {
     overflow: hidden;

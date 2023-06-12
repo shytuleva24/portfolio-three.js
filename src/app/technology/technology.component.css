@@ -31,14 +31,95 @@ h4 {
     text-align: center;
     color: rgba(255, 255, 255, 0.2);
 }
+
 .skill-items {
     margin: 0 auto;
     max-width: 70%;
 }
-.skill-card:hover {
-    color: white;
+.skill-card.active {
+    /*color: white;*/
 }
 .skill-card li {
     font-size: 14rem;
     line-height: 17rem;
 }
+.skill-card {
+    position: relative;
+}
+
+.skill-card.active {
+    color: white;
+}
+.skill-items {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card .line {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+/*@media only screen and (max-width: 768px) {*/
+/*    .ListItem {*/
+/*        font-size: 24px;*/
+/*        color: white;*/
+/*        -webkit-text-stroke: 0px;*/
+/*    }*/
+/*}*/
+
+.skill-card .line::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    /*transition: height 0.5s linear, color 0.5s linear;*/
+}
+
+.skill-card.active .line::after {
+    height: 100%;
+    color: white;
+}
+
+@keyframes moveTextIn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes moveTextOut {
+    from {
+        height: 100%;
+        color: white;
+    }
+    to {
+        height: 0;
+        color: gray;
+        top: 100%;
+    }
+}
+
+.skill-card:not(.active) .line::after {
+    animation: moveTextOut .3s linear both;
+}
+
+.skill-card.active .line::after {
+    animation: moveTextIn .3s linear both;
+}
+
+
+
+
+
+
+

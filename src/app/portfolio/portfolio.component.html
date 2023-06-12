@@ -7,126 +7,28 @@
   </div>
 </div>
 <div class="portfolio-content">
-  <div class="card card1">
-    <a href="https://shytuleva24.github.io/startup/"></a>
-    <img src="assets/work01.jpg" alt="">
-    <div class="content-card">
-      <div class="flex">
-        <div class="title-card">
-          <h4>work001</h4>
-          <span>2022</span>
-        </div>
-        <div class="button">
-          <img class="but-how" src="assets/buttonhover.png" alt="">
-          <img class="but" src="assets/button.png" alt="">
-        </div>
-      </div>
-      <div class="about-card">
-        <p class="name-project">Startup</p>
-        <p class="use-scills">Sass/Pug        Vanilla JS</p>
-      </div>
-    </div>
-  </div>
-  <div class="cards flex">
-    <div class="card card2">
-      <a href="https://shytuleva24.github.io/sea/"></a>
-      <img src="assets/work02.jpg" alt="">
+  <div class="cards">
+    <div class="card line"
+         [ngClass]="project.animationClass"
+         [ngStyle]="{ 'max-width': project.maxWidth }"
+         *ngFor="let project of projects"
+>
+      <a [href]="project.link"></a>
+      <img [src]="project.image" alt="">
       <div class="content-card">
         <div class="flex">
           <div class="title-card">
-            <h4>work002</h4>
-            <span>2022</span>
+            <h4>{{ project.id }}</h4>
+            <span>{{ project.year }}</span>
           </div>
           <div class="button">
             <img class="but-how" src="assets/buttonhover.png" alt="">
             <img class="but" src="assets/button.png" alt="">
           </div>
         </div>
-        <div class="about-card">
-          <p class="name-project">Sea</p>
-          <p class="use-scills">Sass/Pug        Bootstrap</p>
-        </div>
-      </div>
-    </div>
-    <div class="card card3">
-      <a href="https://shytuleva24.github.io/repair/"></a>
-      <img src="assets/work03.jpg" alt="">
-      <div class="content-card">
-        <div class="flex">
-          <div class="title-card">
-            <h4>work003</h4>
-            <span>2022</span>
-          </div>
-          <div class="button">
-            <img class="but-how" src="assets/buttonhover.png" alt="">
-            <img class="but" src="assets/button.png" alt="">
-          </div>
-        </div>
-        <div class="about-card">
-          <p class="name-project">Repair design</p>
-          <p class="use-scills">Sass/Pug        BEM        jQuery</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card card4">
-    <a href="https://shytuleva24.github.io/startup/"></a>
-    <img src="assets/work06.jpg" alt="">
-    <div class="content-card">
-      <div class="flex">
-        <div class="title-card">
-          <h4>work004</h4>
-          <span>2023</span>
-        </div>
-        <div class="button">
-          <img class="but-how" src="assets/buttonhover.png" alt="">
-          <img class="but" src="assets/button.png" alt="">
-        </div>
-      </div>
-      <div class="about-card">
-        <p class="name-project">Testing site</p>
-        <p class="use-scills">Angular firebase</p>
-      </div>
-    </div>
-  </div>
-  <div class="cards flex">
-    <div class="card card3">
-      <a href="https://shytuleva24.github.io/startup/"></a>
-      <img src="assets/work05.jpg" alt="">
-      <div class="content-card">
-        <div class="flex">
-          <div class="title-card">
-            <h4>work005</h4>
-            <span>2023</span>
-          </div>
-          <div class="button">
-            <img class="but-how" src="assets/buttonhover.png" alt="">
-            <img class="but" src="assets/button.png" alt="">
-          </div>
-        </div>
-        <div class="about-card">
-          <p class="name-project">Three.js</p>
-          <p class="use-scills">Three.js angular</p>
-        </div>
-      </div>
-    </div>
-    <div class="card card2">
-      <a href="https://shytuleva24.github.io/startup/"></a>
-      <img src="assets/work04.jpg" alt="">
-      <div class="content-card">
-        <div class="flex">
-          <div class="title-card">
-            <h4>work006</h4>
-            <span>2022</span>
-          </div>
-          <div class="button">
-            <img class="but-how" src="assets/buttonhover.png" alt="">
-            <img class="but" src="assets/button.png" alt="">
-          </div>
-        </div>
-        <div class="about-card">
-          <p class="name-project">Bringitup</p>
-          <p class="use-scills">JavaScript modules        OOP</p>
+        <div class="about-card" [ngStyle]="{ 'color': project.color }">
+          <p class="name-project">{{ project.name }}</p>
+          <p class="use-scills">{{ project.skills }}</p>
         </div>
       </div>
     </div>

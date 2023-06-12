@@ -9,9 +9,22 @@
   </div>
 </div>
 
-<div class="marquee">
-  <span class="text"> How?&nbsp; </span>
-  <span class="text"> How?&nbsp; </span>
-  <span class="text"> How?&nbsp; </span>
-  <span class="text"> How?&nbsp; </span>
+<div class="marquee"
+     (mouseenter)="isHovered = true"
+     (mouseleave)="isHovered = false"
+     (mousemove)="moveImage($event)"
+>
+  <div class="text-line">
+    <span class="text"> How?&nbsp; </span>
+    <span class="text"> How?&nbsp; </span>
+    <span class="text"> How?&nbsp; </span>
+    <span class="text"> How?&nbsp; </span>
+  </div>
+  <img class="hover-image"
+       [style.transform]="'translate(' + imageX + 'px, ' + imageY + 'px)'"
+       src="assets/myPhoto.jpg"
+       alt="">
+
 </div>
+<!--[style.transition]="'transform ' + transitionDuration + ' ease'"-->
+<!--[style.transition-duration]="transitionDuration"-->
