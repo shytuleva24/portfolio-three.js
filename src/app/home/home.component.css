@@ -1,0 +1,63 @@
+.container {
+    padding: 40px;
+    height: 100%;
+}
+.logo {
+    text-transform: none;
+}
+.nav {
+    justify-content: space-between;
+}
+.title-home {
+    position: relative;
+    padding: 20px;
+}
+.title {
+    font-weight: 400;
+    font-size: 10.5vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4)
+}
+@media (max-width: 1148px) {
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+a {
+    font-weight: 700;
+    font-size: 1.1vw;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.about-me {
+    max-width: 45%;
+    position: absolute;
+    top: 41%;
+    left: 62%;
+    font-weight: 500;
+    font-size: 1.9vw;
+    line-height: 3vw;
+    letter-spacing: -0.04em;
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4)
+}
+.wave-text-home {
+    overflow: hidden;
+}
+
+.line-home {
+    display: block;
+    /*transform: translateY(100%);*/
+    /*transition: transform .5s .3s ease-in-out;*/
+}
+/*.show.line {*/
+/*    transform: translateY(0);*/
+/*}*/
+
+
+
+
+

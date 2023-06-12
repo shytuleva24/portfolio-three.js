@@ -1,13 +1,63 @@
-<div class="about">
-  <h3>About me</h3>
-  <p>Hello, my name is Olga Shutyleva. I am a frontend developer. Last year I studied at the Hashtag Academy school as a front-end developer. I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term. Please see my CV, see my skills and some of my work.</p>
-</div>
-<div class="education">
-  <h3>EDUCATION</h3>
-  <ul>
-    <li>- Ukrainian state university of railway transport, educational program: "Network technologies and computer equipment"</li>
-    <li>- V. N. Karazin Kharkiv National University, educational program: "Management of Financial and Economic Security" </li>
-    <li>- "Hashtag academy", educational program: "Front-end developer"</li>
-    <li>- "Udemy", educational program: "Angular 9"</li>
-  </ul>
+<div class="about-container">
+  <div class="about">
+    <div class="wave-text anim-element">
+      <h3 class="line">About me</h3>
+    </div>
+    <div>
+      <p class="wave-text about-me">
+      <span *ngFor="let word of aboutMe.split(' ')" class="line" style="white-space: pre;">
+        {{ word }}
+      </span>
+      </p>
+    </div>
+<!--    <div class="anim-element">-->
+<!--      <p-->
+<!--              class="wave-text about-me "-->
+<!--              *ngFor="let line of aboutMe;"-->
+<!--      >-->
+<!--        <span class="line">-->
+<!--          {{ line }}-->
+<!--        </span>-->
+<!--      </p>-->
+<!--    </div>-->
+  </div>
+  <div class="educations">
+    <div class="wave-text anim-element">
+
+      <h3 class="line">EDUCATION</h3>
+    </div>
+    <div class="education">
+      <p class="wave-text">
+        <span *ngFor="let word of educationRailway.split(' ')" class="line" style="white-space: pre;">
+          {{ word }}
+        </span>
+      </p>
+      <p class="wave-text">
+        <span *ngFor="let word of educationKarazin.split(' ')" class="line" style="white-space: pre;">
+          {{ word }}
+        </span>
+      </p>
+      <p class="wave-text">
+        <span *ngFor="let word of educationHashtag.split(' ')" class="line" style="white-space: pre;">
+          {{ word }}
+        </span>
+      </p>
+      <p class="wave-text">
+        <span *ngFor="let word of educationUdemy.split(' ')" class="line" style="white-space: pre;">
+          {{ word }}
+        </span>
+      </p>
+    </div>
+<!--    <div class="anim-element">-->
+<!--      <p-->
+<!--              class="wave-text education"-->
+<!--              *ngFor="let line of education;"-->
+<!--      >-->
+<!--        <span class="line">-->
+<!--          {{ line }}-->
+<!--        </span>-->
+<!--      </p>-->
+<!--    </div>-->
+
+  </div>
 </div>

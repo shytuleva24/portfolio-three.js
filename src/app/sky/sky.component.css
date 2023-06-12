@@ -1,45 +1,5 @@
-h1 {
-    padding: 20px;
-    font-weight: 400;
-    font-size: 190px;
-    line-height: 200px;
-    text-transform: uppercase;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.4)
-}
-
-a {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: white;
-}
-
-p {
-    max-width: 320px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: white;
-
-}
-span {
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: white;
-    position: absolute;
-    bottom: 20px;
+canvas {
+    position: relative;
+    height: 100vh;
+    z-index: 0 !important;
 }

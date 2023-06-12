@@ -29,12 +29,6 @@ export class SkyComponent implements AfterViewInit {
     this.scene.background = new THREE.Color(0xdddddd);
 
     this.camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 3000);
-    // this.camera.rotation.y = 0;
-    // this.camera.rotation.x = 0;
-    // this.camera.rotation.z = 0;
-    // this.camera.position.x = 0;
-    // this.camera.position.y = 0;
-    // this.camera.position.z = 0;
     this.renderer = new THREE.WebGLRenderer({canvas, antialias: true});
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     const shipObject = this.scene.getObjectByName("ship");
@@ -104,7 +98,6 @@ export class SkyComponent implements AfterViewInit {
       const cameraRotationSpeed = 0.00005; // Скорость вращения камеры
       const cameraOffset = new THREE.Vector3(0, 5, 0); // Смещение камеры относительно корабля
 
-      // Изменяем позицию камеры в зависимости от положения мыши
       const targetX = shipPosition.x + cameraRadius * Math.sin(cameraRotationSpeed + this.mouseX);
       const targetZ = shipPosition.z + cameraRadius * Math.cos(cameraRotationSpeed + this.mouseX);
       const targetY = shipPosition.y + cameraOffset.y + this.mouseY;
@@ -112,24 +105,20 @@ export class SkyComponent implements AfterViewInit {
       const rotationSpeed = 0.001; // Скорость вращения камеры
       const smoothness = 0.1; // Сглаживание движения камеры
 
-      // Плавное движение камеры
       this.camera.position.x += (targetX - this.camera.position.x) * smoothness;
       this.camera.position.z += (targetZ - this.camera.position.z) * smoothness;
       this.camera.position.y += (targetY - this.camera.position.y) * smoothness;
 
-      // Медленное вращение камеры в направлении мыши
       const targetRotationY = -this.mouseX;
       const targetRotationX = -this.mouseY;
 
       const rotationThreshold = 0.0001; // Порог для остановки вращения
 
-      // Останавливаем вращение, если значение поворота близко к нулю
       if (Math.abs(this.camera.rotation.y - targetRotationY) > rotationThreshold ||
           Math.abs(this.camera.rotation.x - targetRotationX) > rotationThreshold) {
         this.camera.rotation.y += (targetRotationY - this.camera.rotation.y) * rotationSpeed;
         this.camera.rotation.x += (targetRotationX - this.camera.rotation.x) * rotationSpeed;
       } else {
-        // Если нет движения мыши, медленно вращаем камеру вокруг корабля
         this.camera.rotation.y += rotationSpeed;
       }
 

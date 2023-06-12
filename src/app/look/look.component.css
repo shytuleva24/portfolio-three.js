@@ -1,0 +1,29 @@
+h2 {
+    font-size: 128rem;
+    line-height: 171rem;
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 71px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);;
+}
+.marquee span {
+    font-size: 210rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    animation: marquee 4s linear infinite;
+    /*text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;*/
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}

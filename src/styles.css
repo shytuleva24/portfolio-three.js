@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display+SC&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +6,22 @@
 }
 body {
     font-family: 'Inter', sans-serif;
-    width: 100%;
-    /*min-height: 100vh;*/
+    /*width: 100%;*/
+    /*line-height: 150%;*/
+    /*!*min-height: 100vh;*!*/
     margin: 0;
     background: #000;
     overflow-x: hidden;
     color: white;
+}
+.title {
+    font-family: 'Playfair Display SC', serif;
+    line-height: 150%;
+    font-weight: 400;
+}
+.scroll-block {
+    scroll-snap-align: start; /* Устанавливаем привязку блока к началу контейнера при прокрутке */
+    /*overflow-y: scroll; !* Включаем вертикальную прокрутку *!*/
 }
 html, body {
     font-size: 1px;
@@ -20,7 +30,7 @@ h3 {
     padding-bottom: 40rem;
     font-style: italic;
     font-weight: 500;
-    font-size: 20rem;
+    font-size: 1.1vw;
     line-height: 24rem;
     text-transform: uppercase;
 }
@@ -33,15 +43,38 @@ h3 {
 ul {
     list-style: none;
 }
-/*#rendererContainer {*/
-/*    position: relative;*/
-/*}*/
+a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-/*canvas {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    z-index: 0;*/
-/*    pointer-events: none;*/
-/*}*/
+.wave-text {
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    height: 100%;
+}
+
+.line {
+    /*display: block;*/
+    display: inline-block;
+    word-wrap: break-word;
+    transform: translateY(2vw);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.show-anim .line {
+    transform: translateY(0);
+    opacity: 1;
+}
+.show-anim.line {
+    transform: translateY(0);
+    opacity: 1;
+
+}
 

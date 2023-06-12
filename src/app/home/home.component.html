@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="flex nav wave-text">
+    <a [@showUp] class="logo">olga shutyleva</a>
+    <a [@showUp] >contact</a>
+  </div>
+  <div class="title-home">
+    <div
+            class="wave-text-home title"
+            *ngFor="let line of title;"
+    >
+      <span [@showUp] class="line-home">
+        {{ line }}
+      </span>
+    </div>
+    <div  class="about-me">
+      <p
+              class="wave-text-home"
+              *ngFor="let line of aboutMe;"
+      >
+        <span [@showUp] class="line-home">
+          {{ line }}
+        </span>
+      </p>
+    </div>
+
+    <!--    <p>Hi, I'm Olga and I'm developing your sites. Tell me about your idea and I will design its mechanical heart. </p>-->
+  </div>
+</div>
+

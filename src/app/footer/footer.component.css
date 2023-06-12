@@ -1,0 +1,44 @@
+h2 {
+    font-weight: 500;
+    font-size: 40rem;
+    line-height: 48rem;
+}
+footer {
+    padding-top: 109rem;
+}
+footer .flex{
+    justify-content: space-between
+}
+.footer-header {
+    width: 30%;
+}
+.footer-info {
+    width: 60%;
+}
+.developer, .designer {
+    margin-bottom: 180px;
+}
+.footer-info .footer-title,
+.footer-info .contact {
+    width: 40%;
+}
+.name {
+    font-size: 24px;
+    line-height: 29px;
+}
+.contact a {
+    margin-bottom: 15rem;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: rgba(255, 255, 255, 0.9);
+}
+.copyright {
+    padding: 30rem 0;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
