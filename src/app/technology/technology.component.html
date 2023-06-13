@@ -15,7 +15,18 @@
   </div>
 </div>
 <div class="skills">
-  <div class="skill-card scroll-block" *ngFor="let block of blocks; let i = index" [ngClass]="{ 'active': block.isActive }" [id]="'block-' + i">
+  <div class="mask-container" #maskContainer>
+    <div class="mask-start" [style.height]="maskStartHeight"></div>
+    <div class="mask-active" [style.height]="maskActiveHeight"></div>
+    <div class="mask-end" [style.height]="maskEndHeight"></div>
+  </div>
+  <div
+          class="skill-card scroll-block"
+          *ngFor="let block of blocks; let i = index"
+          [ngClass]="{ 'active': block.isActive }"
+          [id]="'block-' + i"
+          #blockElement
+  >
     <div class="wave-text">
       <h4 class="line" [attr.data-text]="block.title">{{ block.title }}</h4>
     </div>

@@ -10,15 +10,16 @@
 }
 .title-home {
     position: relative;
-    padding: 20px;
+    padding: 0 20px;
 }
 .title {
     font-weight: 400;
-    font-size: 10.5vw;
-    line-height: 120%;
+    font-size: 15.5vw;
+    line-height: 93%;
     text-transform: uppercase;
     color: white;
-    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2)
+    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);
+    text-wrap: none;
 }
 @media (max-width: 1148px) {
     h1 {
@@ -39,8 +40,8 @@ a {
     top: 41%;
     left: 62%;
     font-weight: 500;
-    font-size: 1.9vw;
-    line-height: 3vw;
+    font-size: 1.8vw;
+    line-height: 120%;
     letter-spacing: -0.04em;
     text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2)
 }
