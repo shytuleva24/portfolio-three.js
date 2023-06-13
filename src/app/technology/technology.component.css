@@ -21,8 +21,6 @@
 }
 .skills {
     padding: 109rem 0;
-    position: relative;
-    overflow: hidden;
 }
 h4 {
     font-size: 96rem;
@@ -38,9 +36,9 @@ h4 {
     margin: 0 auto;
     max-width: 70%;
 }
-/*.skill-card.active {*/
-/*    !*color: white;*!*/
-/*}*/
+.skill-card.active {
+    /*color: white;*/
+}
 .skill-card li {
     font-size: 14rem;
     line-height: 17rem;
@@ -59,23 +57,13 @@ h4 {
 
 .skill-card .line {
     cursor: pointer;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
     white-space: nowrap;
 
 }
-.mask-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    font-size: 30rem;
-}
-.mask-start, .mask-end {
-    transition: height .5s ease-in-out;
-    background: rgba(0,0,0, 0.8);
-}
+
 /*@media only screen and (max-width: 768px) {*/
 /*    .ListItem {*/
 /*        font-size: 24px;*/
@@ -84,50 +72,50 @@ h4 {
 /*    }*/
 /*}*/
 
-/*.skill-card .line::after {*/
-/*    content: attr(data-text);*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    height: 0;*/
-/*    overflow: hidden;*/
-/*    white-space: nowrap;*/
-/*    !*transition: height 0.5s linear, color 0.5s linear;*!*/
-/*}*/
+.skill-card .line::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    /*transition: height 0.5s linear, color 0.5s linear;*/
+}
 
-/*.skill-card.active .line::after {*/
-/*    height: 100%;*/
-/*    color: white;*/
-/*}*/
+.skill-card.active .line::after {
+    height: 100%;
+    color: white;
+}
 
-/*@keyframes moveTextIn {*/
-/*    from {*/
-/*        height: 0;*/
-/*    }*/
-/*    to {*/
-/*        height: 100%;*/
-/*    }*/
-/*}*/
+@keyframes moveTextIn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
 
-/*@keyframes moveTextOut {*/
-/*    from {*/
-/*        height: 100%;*/
-/*        color: white;*/
-/*    }*/
-/*    to {*/
-/*        height: 0;*/
-/*        color: gray;*/
-/*        top: 100%;*/
-/*    }*/
-/*}*/
+@keyframes moveTextOut {
+    from {
+        height: 100%;
+        color: white;
+    }
+    to {
+        height: 0;
+        color: gray;
+        top: 100%;
+    }
+}
 
-/*.skill-card:not(.active) .line::after {*/
-/*    animation: moveTextOut .3s linear both;*/
-/*}*/
+.skill-card:not(.active) .line::after {
+    animation: moveTextOut .3s linear both;
+}
 
-/*.skill-card.active .line::after {*/
-/*    animation: moveTextIn .3s linear both;*/
-/*}*/
+.skill-card.active .line::after {
+    animation: moveTextIn .3s linear both;
+}
 
 
 
