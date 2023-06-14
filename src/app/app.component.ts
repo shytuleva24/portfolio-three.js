@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { ScrollAnimationService } from './scroll-animation.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { ScrollAnimationService } from './scroll-animation.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
+  @ViewChild('homePage', { static: true }) homePage!: ElementRef;
 
   circleX!: number;
   circleY!: number;
@@ -17,7 +18,8 @@ export class AppComponent implements AfterViewInit {
 
   constructor(
       private scrollAnimationService: ScrollAnimationService,
-      private elementRef: ElementRef
+      private elementRef: ElementRef,
+      private renderer: Renderer2
   ) {}
 
   ngAfterViewInit() {
@@ -31,7 +33,6 @@ export class AppComponent implements AfterViewInit {
     this.mouseX = this.circleX;
     this.mouseY = this.circleY;
     this.updateCircle();
-
   }
 
   @HostListener('document:mousemove', ['$event'])
@@ -40,17 +41,53 @@ export class AppComponent implements AfterViewInit {
     this.mouseY = event.clientY + window.pageYOffset;
   }
 
+  @HostListener('window:scroll')
+  onScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const opacity = Math.max(0.4, 1 - (scrollPosition / 1000)); // Adjust the division value as needed
+    this.renderer.setStyle(this.homePage.nativeElement, 'opacity', opacity.toString());
+
+    // const windowHeight = window.innerHeight;
+    //
+    // const adjustedCircleY = this.circleY - scrollPosition;
+    // if (adjustedCircleY < 0 || adjustedCircleY > windowHeight) {
+    //   console.log(1);
+
+    // } else {
+    //   console.log(2);
+    //   this.circleY = this.mouseY;
+    // }
+
+    // this.updateCircle();
+  }
+
   updateCircle() {
     const dx = this.mouseX - this.circleX;
     const dy = this.mouseY - this.circleY;
+
+    // Update the circle position based on mouse movement
     this.circleX += dx * this.speed;
     this.circleY += dy * this.speed;
 
-    const circleElement = this.elementRef.nativeElement.querySelector('.circle');
-    circleElement.style.left = this.circleX + 'px';
-    circleElement.style.top = this.circleY + 'px';
+    // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // const windowHeight = window.innerHeight;
+    //
+    // const adjustedCircleY = this.circleY - scrollPosition;
+    // if (adjustedCircleY < 0 || adjustedCircleY > windowHeight) {
+    //   this.circleY = scrollPosition + windowHeight / 2;
+    // }
 
-    setTimeout(() => this.updateCircle(), this.delay);
+    requestAnimationFrame(() => this.updateCircle());
   }
+  // updateCircle(scrollPosition?: number) {
+  //
+  //   const dx = this.mouseX - this.circleX;
+  //   const dy = this.mouseY - this.circleY;
+  //   this.circleX += dx * this.speed;
+  //   this.circleY += dy * this.speed;
+  //
+  //   requestAnimationFrame(() => this.updateCircle());
+  // }
+
 
 }

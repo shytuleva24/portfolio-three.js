@@ -11,7 +11,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 100rem;
+    gap: 5vw;
     align-items: flex-start
 }
 .card {

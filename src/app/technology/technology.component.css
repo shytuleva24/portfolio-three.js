@@ -20,18 +20,18 @@
     text-decoration: none;
 }
 .skills {
-    padding: 109rem 0;
+    margin: 109rem 0;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 h4 {
     font-size: 96rem;
     line-height: 116rem;
 }
 .skill-card {
-    margin-bottom: 40rem;
+    padding-bottom: 40rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.2);
+    /*color: rgba(255, 255, 255, 0.2);*/
 }
 
 .skill-items {
@@ -49,9 +49,9 @@ h4 {
     position: relative;
 }
 
-.skill-card.active {
-    color: white;
-}
+/*.skill-card.active {*/
+/*    color: white;*/
+/*}*/
 .skill-items {
     list-style: none;
     padding: 0;
@@ -59,23 +59,44 @@ h4 {
 
 .skill-card .line {
     cursor: pointer;
-    color: rgba(255, 255, 255, 1);
-    position: relative;
-    overflow: hidden;
+    margin: 0 auto;
+    /*color: rgba(255, 255, 255, 1);*/
     white-space: nowrap;
 
 }
-.mask-container {
+.active-text {
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    width: 100%;
+    transition: top .5s ease-in-out;
+
+
+}
+.mask-active {
     position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: 10;
-    font-size: 30rem;
+    /*height: 110rem;*/
+    overflow: hidden;
+    transition: top .5s ease-in-out;
 }
-.mask-start, .mask-end {
-    transition: height .5s ease-in-out;
-    background: rgba(0,0,0, 0.8);
+.opacity-text {
+    color: rgba(255, 255, 255, .2);
 }
+.active-text {
+    color: white;
+}
+/*.mask-container {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    z-index: 10;*/
+/*    font-size: 30rem;*/
+/*}*/
+/*.mask-start, .mask-end {*/
+/*    transition: height .5s ease-in-out;*/
+/*    background: rgba(0,0,0, 0.8);*/
+/*}*/
 /*@media only screen and (max-width: 768px) {*/
 /*    .ListItem {*/
 /*        font-size: 24px;*/

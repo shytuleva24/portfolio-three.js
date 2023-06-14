@@ -1,24 +1,24 @@
-<div class="scroll-container"  >
-  <div class="circle" [ngStyle]="{ left: circleX + 'px', top: circleY + 'px' }"></div>
-  <div class="home-page scroll-block">
+<div class="scroll-container">
+<!--  <div class="circle" [ngStyle]="{ left: circleX + 'px', top: circleY + 'px' }"></div>-->
+  <div class="circle" [style.transform]="'translate3d(' + circleX + 'px, ' + circleY + 'px, 0) '"></div>
+  <div class="home-page scroll-block" #homePage>
+    <div class="canvas-overlay"></div>
     <app-sky></app-sky>
-    <div class="home-content">
-      <app-home></app-home>
-    </div>
   </div>
-
-  <div id="block2" class="container">
+  <div class="home-content">
+    <app-home></app-home>
+  </div>
+  <div id="block2" class="container" #block2>
     <app-about></app-about>
   </div>
-  <div id="block3" class="container" >
+  <div id="block3" class="container">
     <app-technology></app-technology>
   </div>
-  <div  id="block5"  class="container">
+  <div id="block5" class="container">
     <app-portfolio></app-portfolio>
   </div>
   <app-look></app-look>
-  <div  id="block6"  class="container">
+  <div id="block6" class="container">
     <app-footer></app-footer>
   </div>
-
 </div>

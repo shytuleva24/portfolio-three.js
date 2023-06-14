@@ -11,28 +11,46 @@
     </div>
   </div>
   <div class="git wave-text">
-    <a class="line" href="https://github.com/shytuleva24">Github   🡒</a>
+    <a class="line" href="https://github.com/shytuleva24">Github 🡒</a>
   </div>
 </div>
 <div class="skills">
-  <div class="mask-container" #maskContainer>
-    <div class="mask-start" [style.height]="maskStartHeight"></div>
-    <div class="mask-active" [style.height]="maskActiveHeight"></div>
-    <div class="mask-end" [style.height]="maskEndHeight"></div>
-  </div>
-  <div
-          class="skill-card scroll-block"
-          *ngFor="let block of blocks; let i = index"
-          [ngClass]="{ 'active': block.isActive }"
-          [id]="'block-' + i"
-          #blockElement
-  >
-    <div class="wave-text">
-      <h4 class="line" [attr.data-text]="block.title">{{ block.title }}</h4>
+  <div class="mask-active" [style.top]="maskActiveHeight" [style.height]="maskHeight">
+    <div class="skill-container active-text" [style.top]="'-' + maskActiveHeight">
+
+      <div
+              class="skill-card"
+              *ngFor="let block of blocks; let i = index"
+              [ngClass]="{ 'active': block.isActive }"
+              #blockElement
+      >
+        <div class="wave-text">
+          <h4 class="line" [attr.data-text]="block.title">{{ block.title }}</h4>
+        </div>
+        <ul class="skill-items flex wave-text">
+          <li class="line" *ngFor="let skill of block.skills" [attr.data-text]="skill">{{ skill }}</li>
+        </ul>
+      </div>
     </div>
-    <ul class="skill-items flex wave-text">
-      <li class="line" *ngFor="let skill of block.skills" [attr.data-text]="skill">{{ skill }}</li>
-    </ul>
+    -->
+
   </div>
+  <div class="skill-container opacity-text">
+    <div
+            class="skill-card"
+            *ngFor="let block of blocks; let i = index"
+            [ngClass]="{ 'active': block.isActive }"
+            [id]="'block-' + i"
+    >
+      <div class="wave-text">
+        <h4 class="line" [attr.data-text]="block.title">{{ block.title }}</h4>
+      </div>
+      <ul class="skill-items flex wave-text">
+        <li class="line" *ngFor="let skill of block.skills" [attr.data-text]="skill">{{ skill }}</li>
+      </ul>
+    </div>
+
+  </div>
+
 </div>
 

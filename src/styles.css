@@ -13,7 +13,7 @@ body {
     background: #000;
     overflow-x: hidden;
     color: white;
-    cursor: none;
+    /*cursor: none;*/
 }
 .title {
     font-family: 'Playfair Display SC', serif;
@@ -34,6 +34,8 @@ h3 {
 }
 .container {
     padding: 0 70rem;
+    position: relative;
+    z-index: 1;
 }
 .flex {
     display: flex;
