@@ -1,20 +1,16 @@
 .container {
-    padding: 40px;
+    padding: 30rem;
     height: 100%;
 }
-.logo {
-    text-transform: none;
-}
-.nav {
-    justify-content: space-between;
-}
+
+
 .title-home {
     position: relative;
     padding: 0 20px;
 }
 .title {
     font-weight: 400;
-    font-size: 15.5vw;
+    font-size: 14.8vw;
     line-height: 100%;
     text-transform: uppercase;
     color: white;
@@ -27,20 +23,13 @@
     }
 }
 
-a {
-    font-weight: 700;
-    font-size: 1.1vw;
-    line-height: 150%;
-    text-transform: uppercase;
-}
-
 .about-me {
     max-width: 45%;
     position: absolute;
-    top: 41%;
+    top: 45%;
     left: 62%;
     font-weight: 500;
-    font-size: 1.8vw;
+    font-size: 1.3vw;
     line-height: 120%;
     letter-spacing: -0.04em;
     text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2)
@@ -51,12 +40,8 @@ a {
 
 .line-home {
     display: block;
-    /*transform: translateY(100%);*/
-    /*transition: transform .5s .3s ease-in-out;*/
 }
-/*.show.line {*/
-/*    transform: translateY(0);*/
-/*}*/
+
 
 
 

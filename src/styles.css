@@ -6,13 +6,14 @@
 }
 body {
     font-family: 'Inter', sans-serif;
-    width: 100%;
+    width: 100vw;
     /*line-height: 150%;*/
     /*!*min-height: 100vh;*!*/
     margin: 0;
     background: #000;
     overflow-x: hidden;
     color: white;
+    position: relative;
     /*cursor: none;*/
 }
 .title {
@@ -23,6 +24,7 @@ body {
 
 html, body {
     font-size: 1px;
+    scroll-behavior: smooth;
 }
 h3 {
     padding-bottom: 40rem;
@@ -65,7 +67,7 @@ img {
     word-wrap: break-word;
     transform: translateY(2vw) rotate(1deg);
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 .show-anim .line {
     transform: none;
@@ -92,3 +94,26 @@ img {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #eee; /* Цвет ползунка при наведении */
 }
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+.circle {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    left: -35px;
+    /*transform: translate(-50%, -50%);*/
+    border-radius: 50%;
+    backdrop-filter: invert(1) grayscale(1);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.link:hover .circle {
+    animation: bounce 0.5s;
+}
+

@@ -10,6 +10,8 @@ import {AppComponent} from "./app.component";
 import { LookComponent } from './look/look.component';
 import { FooterComponent } from './footer/footer.component';
 import {TechnologyComponent} from "./technology/technology.component";
+import { ParallaxDirective } from './parallax.directive';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import {TechnologyComponent} from "./technology/technology.component";
     TechnologyComponent,
     HomeComponent,
     LookComponent,
-    FooterComponent
+    FooterComponent,
+    ParallaxDirective,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,38 +8,27 @@
     width: 100%;
     height: 100vh;
 }
-.circle {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    top: -35px;
-    left: -35px;
-    /*transform: translate(-50%, -50%);*/
-    border-radius: 50%;
-    backdrop-filter: invert(1) grayscale(1);
-    z-index: 9999;
-    pointer-events: none;
-}
+
 .darken {
     transition: opacity 0.5s ease;
 }
 
-.canvas-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    transition: opacity 0.5s ease;
-    opacity: 0;
-    z-index: -1;
-}
-
-/*.darken .canvas-overlay {*/
-/*    opacity: 1;*/
-/*}*/
 .home-page {
     opacity: 1;
+}
+.container {
+    height: 100%;
+}
+a {
+    font-weight: 700;
+    font-size: 1.1vw;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.nav {
+    padding: 30rem;
+    justify-content: space-between;
+}
+.logo {
+    text-transform: none;
 }

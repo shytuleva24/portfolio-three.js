@@ -6,32 +6,40 @@
     <h2 class="line title">Recent Works</h2>
   </div>
 </div>
-<div class="portfolio-content">
-  <div class="cards">
-    <div class="card line"
+<div class="portfolio-content" >
+  <div class="cards" #cardsContainer>
+    <div class="card"
          [ngClass]="project.animationClass"
-         [ngStyle]="{ 'max-width': project.maxWidth }"
-         *ngFor="let project of projects"
+         [ngStyle]="{
+           'width': project.maxWidth,
+           'height': project.height,
+           'background-image': 'url(' + project.image + ')'
+         }"
+         [parallax]="1.5"
+         *ngFor="let project of projects; let i = index"
+         #card
 >
-      <a [href]="project.link"></a>
-      <img [src]="project.image" alt="">
-      <div class="content-card">
-        <div class="flex">
-          <div class="title-card">
-            <h4>{{ project.id }}</h4>
-            <span>{{ project.year }}</span>
+      <div class="card-item">
+          <a [href]="project.link"></a>
+    <!--      <img [src]="project.image" alt="" [parallax]="0.05">-->
+          <div class="content-card">
+            <div class="flex">
+              <div class="title-card">
+                <h4>{{ project.id }}</h4>
+                <span>{{ project.year }}</span>
+              </div>
+              <div class="button">
+                <img class="but-how" ngSrc="assets/buttonhover.png" alt="" fill>
+                <img class="but" ngSrc="assets/button.png" alt="" fill>
+              </div>
+            </div>
+            <div class="about-card" [ngStyle]="{ 'color': project.color }">
+              <p class="name-project">{{ project.name }}</p>
+              <p class="use-scills">{{ project.skills }}</p>
+            </div>
           </div>
-          <div class="button">
-            <img class="but-how" src="assets/buttonhover.png" alt="">
-            <img class="but" src="assets/button.png" alt="">
-          </div>
-        </div>
-        <div class="about-card" [ngStyle]="{ 'color': project.color }">
-          <p class="name-project">{{ project.name }}</p>
-          <p class="use-scills">{{ project.skills }}</p>
         </div>
       </div>
-    </div>
   </div>
 </div>
 

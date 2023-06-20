@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import {Component} from '@angular/core';
+import { trigger, style, animate, transition } from '@angular/animations';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,13 +13,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   title: string[] = ["I'm front-", "End", "Developer"];
   // aboutMe: string = 'Hi, I\'m Olga and I\'m developing your sites. Tell me about your idea and I will design its mechanical heart.'
   aboutMe: string[] = ["Hi, I'm Olga and I'm developing your sites.", "Tell me about your idea and I will", "design its mechanical heart."]
 
-  ngOnInit(): void {
-
-  }
 
 }

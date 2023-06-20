@@ -16,10 +16,22 @@ h2 {
 }
 .card {
     background: #A3A3A3;
+    height: 600rem;
     border-radius: 18px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
+    filter: grayscale(100%);
+    background-size: 140%;
+    transition: background-size .5s ease, filter .5s ease, transform .01s linear;
+    transform: translate3d(0, 80px, 0px) rotate(0deg);
+}
+
+.card.right {
+    transform: translate3d(50px, 80px, 0px) rotate(-4deg);
+}
+.card.left {
+    transform: translate3d(-50px, 80px, 0px) rotate(4deg);
 }
 .card a {
     position: absolute;
@@ -28,14 +40,10 @@ h2 {
     z-index: 2;
 }
 
-.card img {
-    filter: grayscale(100%);
-    transition: all .5s ease;
-    object-fit: cover;
-}
-.card:hover img {
+.card:hover {
     filter: grayscale(0%);
-
+    background-size: 145%;
+    transition: background-size .5s ease, filter .5s ease;
 }
 .about-card {
     position: absolute;
@@ -96,7 +104,7 @@ h2 {
     transform: translateX(2vw) rotate(-2deg);
 }
 .show-anim.line {
-    transition: all .5s ease;
+    /*transition: all .5s ease;*/
     transform: none !important;
     opacity: 1 !important;
 }

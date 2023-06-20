@@ -1,11 +1,15 @@
 <div class="scroll-container">
 <!--  <div class="circle" [ngStyle]="{ left: circleX + 'px', top: circleY + 'px' }"></div>-->
-  <div class="circle" [style.transform]="'translate3d(' + circleX + 'px, ' + circleY + 'px, 0) '"></div>
+  <div class="circle" [class.hovered]="isHovered" [style.transform]="'translate3d(' + circleX + 'px, ' + circleY + 'px, 0) '"></div>
   <div class="home-page scroll-block" #homePage>
     <div class="canvas-overlay"></div>
     <app-sky></app-sky>
   </div>
   <div class="home-content">
+    <div class="flex nav wave-text">
+      <a [@showUp] class="logo">olga shutyleva</a>
+      <a [@showUp] class="link" (click)="smoothScroll()">contact</a>
+    </div>
     <app-home></app-home>
   </div>
   <div id="block2" class="container" #block2>
@@ -18,7 +22,7 @@
     <app-portfolio></app-portfolio>
   </div>
   <app-look></app-look>
-  <div id="block6" class="container">
+  <div id="block6" class="container" id="footer">
     <app-footer></app-footer>
   </div>
 </div>
