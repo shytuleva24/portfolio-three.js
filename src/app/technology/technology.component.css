@@ -1,57 +1,57 @@
 .technology-header h2  {
-    font-size: 128rem;
-    line-height: 145rem;
+    font-size: 7vw;
+    line-height: 150%;
     letter-spacing: -0.02em;
+    text-transform: uppercase;
 }
 .technology-header p {
     font-weight: 500;
-    font-size: 28rem;
-    line-height: 34rem;
+    font-size: 1.5vw;
+    line-height: 150%;
+}
+.technology-header {
+    width: 73vw;
+    margin-left: auto;
 }
 .flex {
     justify-content: space-between;
     align-items: center
 }
 .git a {
+    padding-right: 6vw;
     font-weight: 500;
-    font-size: 32rem;
-    line-height: 39rem;
+    font-size: 1.9vw;
     color: white;
+    text-transform: uppercase;
     text-decoration: none;
 }
 .skills {
     margin: 109rem 0;
     position: relative;
-    /*overflow: hidden;*/
 }
 h4 {
-    font-size: 96rem;
-    line-height: 116rem;
+    font-size: 5vw;
+    line-height: 150%;
+    font-weight: 400;
 }
 .skill-card {
     padding-bottom: 40rem;
     text-align: center;
-    /*color: rgba(255, 255, 255, 0.2);*/
 }
 
 .skill-items {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 60vw;
 }
-/*.skill-card.active {*/
-/*    !*color: white;*!*/
-/*}*/
+
 .skill-card li {
-    font-size: 14rem;
-    line-height: 17rem;
+    font-size: 1vw;
+    line-height: 150%;
 }
 .skill-card {
     position: relative;
 }
 
-/*.skill-card.active {*/
-/*    color: white;*/
-/*}*/
 .skill-items {
     list-style: none;
     padding: 0;
@@ -60,23 +60,18 @@ h4 {
 .skill-card .line {
     cursor: pointer;
     margin: 0 auto;
-    /*color: rgba(255, 255, 255, 1);*/
     white-space: nowrap;
 
 }
 .active-text {
     position: absolute;
-    /*top: 0;*/
     left: 0;
     width: 100%;
     transition: top .5s ease-in-out;
-
-
 }
 .mask-active {
     position: absolute;
     width: 100%;
-    /*height: 110rem;*/
     overflow: hidden;
     transition: top .5s ease-in-out;
 }
@@ -86,71 +81,44 @@ h4 {
 .active-text {
     color: white;
 }
-/*.mask-container {*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    z-index: 10;*/
-/*    font-size: 30rem;*/
-/*}*/
-/*.mask-start, .mask-end {*/
-/*    transition: height .5s ease-in-out;*/
-/*    background: rgba(0,0,0, 0.8);*/
-/*}*/
-/*@media only screen and (max-width: 768px) {*/
-/*    .ListItem {*/
-/*        font-size: 24px;*/
-/*        color: white;*/
-/*        -webkit-text-stroke: 0px;*/
-/*    }*/
-/*}*/
-
-/*.skill-card .line::after {*/
-/*    content: attr(data-text);*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    height: 0;*/
-/*    overflow: hidden;*/
-/*    white-space: nowrap;*/
-/*    !*transition: height 0.5s linear, color 0.5s linear;*!*/
-/*}*/
-
-/*.skill-card.active .line::after {*/
-/*    height: 100%;*/
-/*    color: white;*/
-/*}*/
-
-/*@keyframes moveTextIn {*/
-/*    from {*/
-/*        height: 0;*/
-/*    }*/
-/*    to {*/
-/*        height: 100%;*/
-/*    }*/
-/*}*/
-
-/*@keyframes moveTextOut {*/
-/*    from {*/
-/*        height: 100%;*/
-/*        color: white;*/
-/*    }*/
-/*    to {*/
-/*        height: 0;*/
-/*        color: gray;*/
-/*        top: 100%;*/
-/*    }*/
-/*}*/
-
-/*.skill-card:not(.active) .line::after {*/
-/*    animation: moveTextOut .3s linear both;*/
-/*}*/
-
-/*.skill-card.active .line::after {*/
-/*    animation: moveTextIn .3s linear both;*/
-/*}*/
 
 
+@media (max-width: 650px) {
+    .technology-header h2 {
+        font-weight: 400;
+        font-size: 58px;
+        line-height: 114%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    .technology-header {
+        width: 100%;
+        display: block;
+    }
+    .technology-header p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0;
+        padding-bottom: 20rem;
+    }
+    h4 {
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 95%;
+        padding-bottom: 20rem;
+    }
+    .skill-card li {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.05em;
+    }
+    .skill-items {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
 
 
 

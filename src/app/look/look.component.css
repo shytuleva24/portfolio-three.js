@@ -1,6 +1,6 @@
 h2 {
-    font-size: 128rem;
-    line-height: 171rem;
+    font-size: 6.8vw;
+    line-height: 150%;
 }
 .marquee {
     width: 100%;
@@ -13,7 +13,7 @@ h2 {
     white-space: nowrap;
 }
 .marquee span {
-    font-size: 210rem;
+    font-size: 13vw;
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
@@ -30,6 +30,7 @@ h2 {
     transition: opacity 0.5s ease; /* Добавлено свойство transition для плавной анимации */
     border-radius: 18px;
     pointer-events: none;
+    overflow: hidden;
     transition-timing-function: ease-in-out;
     will-change: transform;
     z-index: 10;
@@ -46,5 +47,16 @@ h2 {
     }
     100% {
         transform: translate(-100%, 0);
+    }
+}
+@media (max-width: 650px) {
+    .hover-image {
+        margin: 10rem 30rem 157rem;
+        position: static;
+        width: 100%;
+        opacity: 1;
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: 22px;
     }
 }

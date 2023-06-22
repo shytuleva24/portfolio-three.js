@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
-import {ScrollAnimationService} from "../scroll-animation.service";
+import {ScrollAnimationService} from "../services/scroll-animation.service";
 
 @Component({
     selector: 'app-about',

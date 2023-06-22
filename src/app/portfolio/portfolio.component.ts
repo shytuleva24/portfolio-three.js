@@ -1,5 +1,6 @@
 import {Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {debounceTime, Subject} from "rxjs";
+import {MouseIconService} from "../services/mouse-icon.service";
 
 @Component({
     selector: 'app-portfolio',
@@ -20,21 +21,9 @@ export class PortfolioComponent {
             link: 'https://shytuleva24.github.io/startup/',
             skills: 'Sass/Pug Vanilla JS',
             maxWidth: '100%',
-            height: '450rem',
+            height: '33vw',
             color: '#fff',
             animationClass: 'fade-in'
-        },
-        {
-            id: 'work 005',
-            name: 'Repair design',
-            year: '2022',
-            image: 'assets/work03.jpg',
-            link: 'https://shytuleva24.github.io/repair/',
-            skills: 'Sass/Pug BEM jQuery',
-            maxWidth: '35%',
-            height: '568rem',
-            color: '#FFFFFF',
-            animationClass: 'left'
         },
         {
             id: 'work 002',
@@ -43,9 +32,21 @@ export class PortfolioComponent {
             image: 'assets/work02.jpg',
             link: 'https://shytuleva24.github.io/sea/',
             skills: 'Sass/Pug Bootstrap',
-            maxWidth: '55%',
-            height: '700rem',
+            maxWidth: '50vw',
+            height: '57vw',
             color: '#000',
+            animationClass: 'left'
+        },
+        {
+            id: 'work 005',
+            name: 'Repair design',
+            year: '2022',
+            image: 'assets/work03.jpg',
+            link: 'https://shytuleva24.github.io/repair/',
+            skills: 'Sass/Pug BEM jQuery',
+            maxWidth: '26vw',
+            height: '43vw',
+            color: '#FFFFFF',
             animationClass: 'right'
         },
         {
@@ -55,8 +56,8 @@ export class PortfolioComponent {
             image: 'assets/work04.jpg',
             link: 'https://shutyleva.fun/',
             skills: 'JavaScript modules OOP',
-            maxWidth: '75%',
-            height: '450rem',
+            maxWidth: '66vw',
+            height: '35vw',
             color: '#FFFFFF',
             animationClass: 'fade-in'
         },
@@ -67,8 +68,8 @@ export class PortfolioComponent {
             image: 'assets/work06.jpg',
             link: 'https://shytuleva24.github.io/portfolio-head/',
             skills: 'Angular Firebase',
-            maxWidth: '50%',
-            height: '556rem',
+            maxWidth: '41vw',
+            height: '43vw',
             color: '#FFFFFF',
             animationClass: 'left'
         },
@@ -79,17 +80,26 @@ export class PortfolioComponent {
             image: 'assets/work05.jpg',
             link: 'https://shytuleva24.github.io/portfolio-head/',
             skills: 'Three.js Angular',
-            maxWidth: '44%',
-            height: '700rem',
+            maxWidth: '35vw',
+            height: '55vw',
             color: '#FFFFFF',
             animationClass: 'right'
         }
     ];
     private scrollSubject = new Subject();
+    constructor(private mouseService: MouseIconService) {
+    }
+    onMouseEnter() {
+        this.mouseService.onMouseEnter();
+    }
+
+    onMouseLeave() {
+        this.mouseService.onMouseLeave();
+    }
     ngAfterViewInit() {
         this.calculateCardRotations();
         this.scrollSubject
-            .pipe(debounceTime(1000))
+            .pipe(debounceTime(500))
             .subscribe(() => {
                 this.calculateCardRotations();
             });
@@ -108,10 +118,10 @@ export class PortfolioComponent {
             const cardElement = card.nativeElement;
             const cardPosY = this.getElementPosition(cardElement);
 
-            if (scrollPosition >= cardPosY - (viewportHeight / 1.5)) {
+            if (scrollPosition >= cardPosY - viewportHeight) {
                 const scrollDelta = cardPosY - scrollPosition;
-                const maxScrollDelta = viewportHeight / 1.5;
-                const posX = 50;
+                const maxScrollDelta = viewportHeight;
+                const posX = 100;
                 const posY = 80;
                 const posRotate = 4;
 

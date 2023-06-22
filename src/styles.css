@@ -6,13 +6,13 @@
 }
 body {
     font-family: 'Inter', sans-serif;
-    width: 100vw;
+    width: 100% !important;
     /*line-height: 150%;*/
     /*!*min-height: 100vh;*!*/
     margin: 0;
     background: #000;
     overflow-x: hidden;
-    color: white;
+    color: #FEFEFE;
     position: relative;
     /*cursor: none;*/
 }
@@ -34,10 +34,27 @@ h3 {
     line-height: 24rem;
     text-transform: uppercase;
 }
+@media (max-width: 650px) {
+    h3 {
+        padding-bottom: 15rem;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+}
 .container {
-    padding: 0 70rem;
+    padding: 0 3.5vw;
     position: relative;
     z-index: 1;
+}
+@media (max-width: 650px) {
+    .container {
+        padding: 0 35rem;
+        position: relative;
+        z-index: 1;
+    }
 }
 .flex {
     display: flex;
@@ -102,10 +119,10 @@ img {
 
 .circle {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    top: -35px;
-    left: -35px;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*top: -50px;*/
+    /*left: -50px;*/
     /*transform: translate(-50%, -50%);*/
     border-radius: 50%;
     backdrop-filter: invert(1) grayscale(1);

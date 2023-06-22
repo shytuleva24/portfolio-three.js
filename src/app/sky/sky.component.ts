@@ -34,11 +34,10 @@ export class SkyComponent implements AfterViewInit {
     this.renderer = new THREE.WebGLRenderer({canvas, antialias: true});
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     const shipObject = this.scene.getObjectByName("ship");
-    console.log(shipObject);
     if (shipObject) {
       this.camera.lookAt(shipObject.position);
 
-      const cameraOffset = new THREE.Vector3(0, 5, -15);
+      const cameraOffset = new THREE.Vector3(-5, 5, 500);
       this.camera.position.copy(shipObject.position).add(cameraOffset);
     }
     const loader = new GLTFLoader();
@@ -49,7 +48,7 @@ export class SkyComponent implements AfterViewInit {
       this.scene.traverse((object: THREE.Object3D) => {
         if (object.name === "Boot_Finaal_1") { // Замените "Boot_Finaal_1" на имя вашего корабля
           this.ship = object;
-          const cameraOffset = new THREE.Vector3(0, 5, -10);
+          const cameraOffset = new THREE.Vector3(-5, 5, 500);
           this.camera.position.copy(object.position).add(cameraOffset);
         }
       });
@@ -103,16 +102,20 @@ export class SkyComponent implements AfterViewInit {
   animate() {
     if (this.ship) {
       const shipPosition = this.ship.position;
-      const cameraRadius = 500; // Расстояние от камеры до корабля
-      const cameraRotationSpeed = 0.00005; // Скорость вращения камеры
-      const cameraOffset = new THREE.Vector3(0, 5, 0); // Смещение камеры относительно корабля
-
-      const targetX = shipPosition.x + cameraRadius * Math.sin(cameraRotationSpeed + this.mouseX);
-      const targetZ = shipPosition.z + cameraRadius * Math.cos(cameraRotationSpeed + this.mouseX);
-      const targetY = shipPosition.y + cameraOffset.y + this.mouseY;
-
-      const rotationSpeed = 0.001; // Скорость вращения камеры
-      const smoothness = 0.1; // Сглаживание движения камеры
+      const cameraRadius = 350; // Расстояние от камеры до корабля
+      const cameraRotationSpeed = 0.3; // Скорость вращения камеры
+      const cameraOffset = new THREE.Vector3(30, 5, cameraRadius); // Смещение камеры относительно корабля
+      const cameraPhi = this.mouseY * cameraRotationSpeed;
+      const targetX = shipPosition.x + cameraRadius * Math.sin(cameraRotationSpeed + this.mouseX * cameraRotationSpeed);
+      const targetZ = shipPosition.z + cameraRadius * Math.cos(cameraRotationSpeed + this.mouseX * cameraRotationSpeed);
+      // const targetY = shipPosition.y + cameraOffset.y + this.mouseY;
+      const targetY = THREE.MathUtils.clamp(
+          shipPosition.y + cameraRadius * Math.sin(cameraPhi) + cameraOffset.y,
+          shipPosition.y - Math.sin(THREE.MathUtils.degToRad(5)) * cameraRadius, // Ограничение вниз
+          shipPosition.y + Math.sin(THREE.MathUtils.degToRad(13)) * cameraRadius  // Ограничение вверх
+      );
+      const rotationSpeed = 0.5; // Скорость вращения камеры
+      const smoothness = 0.03; // Сглаживание движения камеры
 
       this.camera.position.x += (targetX - this.camera.position.x) * smoothness;
       this.camera.position.z += (targetZ - this.camera.position.z) * smoothness;
@@ -130,6 +133,8 @@ export class SkyComponent implements AfterViewInit {
       } else {
         this.camera.rotation.y += rotationSpeed;
       }
+
+
 
       this.camera.lookAt(shipPosition);
     }

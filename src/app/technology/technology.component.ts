@@ -1,4 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {MouseIconService} from "../services/mouse-icon.service";
 
 interface Block {
   title: string;
@@ -32,7 +33,7 @@ export class TechnologyComponent implements OnInit {
       isActive: false
     },
     {
-      title: 'Control Version',
+      title: 'Development tools',
       skills: ['GitHub', 'Webpack', 'Gulp'],
       isActive: false
     }
@@ -41,11 +42,18 @@ export class TechnologyComponent implements OnInit {
   currentBlockIndex = 0;
   maskHeight: string| number = '0px';
   maskActiveHeight: string| number  = '0px';
-
+  constructor(private mouseService: MouseIconService) {
+  }
   ngOnInit() {
     this.activateBlock(this.currentBlockIndex);
   }
+  onMouseEnter() {
+    this.mouseService.onMouseEnter();
+  }
 
+  onMouseLeave() {
+    this.mouseService.onMouseLeave();
+  }
   @HostListener('window:scroll')
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;

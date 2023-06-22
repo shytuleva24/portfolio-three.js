@@ -1,22 +1,21 @@
 h2 {
     font-weight: 500;
-    font-size: 128rem;
-    line-height: 155rem;
+    font-size: 6.7vw;
+    line-height: 150%;
     text-transform: uppercase;
 }
 .portfolio-content {
-    padding-top: 109rem;
+    padding: 4vw;
 }
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 5vw;
+    gap: 8vw;
     align-items: flex-start
 }
 .card {
     background: #A3A3A3;
-    height: 600rem;
     border-radius: 18px;
     overflow: hidden;
     cursor: pointer;
@@ -28,10 +27,10 @@ h2 {
 }
 
 .card.right {
-    transform: translate3d(50px, 80px, 0px) rotate(-4deg);
+    transform: translate3d(100px, 80px, 0px) rotate(-4deg);
 }
 .card.left {
-    transform: translate3d(-50px, 80px, 0px) rotate(4deg);
+    transform: translate3d(-100px, 80px, 0px) rotate(4deg);
 }
 .card a {
     position: absolute;
@@ -50,15 +49,15 @@ h2 {
     bottom: 0;
 }
 .name-project {
-    font-size: 40rem;
-    line-height: 48rem;
+    font-size: 2.6vw;
+    line-height: 120%;
     padding-bottom: 10rem;
 }
 
 .use-scills {
     font-weight: 500;
-    font-size: 18rem;
-    line-height: 22rem;
+    font-size: 1vw;
+    line-height: 120%;
     text-transform: uppercase;
 }
 
@@ -72,7 +71,7 @@ h2 {
 .title-card {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 18rem;
+    font-size: 1.2vw;
     line-height: 22rem;
 }
 .card .button {
@@ -103,8 +102,25 @@ h2 {
 .line.right {
     transform: translateX(2vw) rotate(-2deg);
 }
-.show-anim.line {
-    /*transition: all .5s ease;*/
-    transform: none !important;
-    opacity: 1 !important;
+
+@media (max-width: 650px) {
+    .portfolio-content {
+        padding: 0 0 158rem;
+    }
+    .card {
+        width: 100% !important;
+        height: 230px !important;
+        background-position: center !important;
+        background-size: cover !important;
+    }
+    .content-card {
+        top: 8rem;
+        left: 8rem;
+        right: 8rem;
+        bottom: 8rem;
+    }
+    .card .button  {
+        width: 10px;
+        height: 10px;
+    }
 }

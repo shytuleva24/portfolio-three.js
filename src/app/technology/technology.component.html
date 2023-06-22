@@ -1,5 +1,5 @@
-<div class="flex">
-  <div class="technology-header">
+<div class="flex technology-header">
+  <div>
     <div class="wave-text">
       <h3 class="line">Technology</h3>
     </div>
@@ -11,7 +11,12 @@
     </div>
   </div>
   <div class="git wave-text">
-    <a class="line" href="https://github.com/shytuleva24">Github 🡒</a>
+    <a
+            class="line"
+            href="https://github.com/shytuleva24"
+            (mouseenter)="onMouseEnter()"
+            (mouseleave)="onMouseLeave()"
+    >Github 🡒</a>
   </div>
 </div>
 <div class="skills">
@@ -32,8 +37,6 @@
         </ul>
       </div>
     </div>
-    -->
-
   </div>
   <div class="skill-container opacity-text">
     <div

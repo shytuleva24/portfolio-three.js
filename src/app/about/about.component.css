@@ -1,22 +1,48 @@
 .about-container {
-    padding-top: 80rem;
+    padding-top: 90rem;
     position: relative;
     z-index: 10;
 }
 
 .about-me {
     font-weight: 500;
-    font-size: 2.5vw;
-    line-height: 150%;
+    font-size: 2.45vw;
+    line-height: 125%;
+    letter-spacing: -1.6rem;
 }
 .educations {
-    padding: 109rem 0;
-    max-width: 55%;
+    padding: 6vw 0 2.4vw;
+    max-width: 46%;
     margin-left: auto;
 }
 
 .education {
     font-weight: 500;
-    font-size: 1.6vw;
-    line-height: 150%;
+    font-size: 1.5vw;
+    line-height: 116%;
+}
+@media (max-width: 650px) {
+    .about-container {
+        padding-top: 156rem;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.01em;
+    }
+    .about-me {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: -0.01em;
+    }
+    .educations {
+        max-width: 65%;
+        padding: 156rem 0;
+    }
+    .education{
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: -0.01em;
+    }
 }
