@@ -121,9 +121,9 @@ export class PortfolioComponent {
             if (scrollPosition >= cardPosY - viewportHeight) {
                 const scrollDelta = cardPosY - scrollPosition;
                 const maxScrollDelta = viewportHeight;
-                const posX = 100;
+                const posX = 50;
                 const posY = 80;
-                const posRotate = 4;
+                const posRotate = 3;
 
                 if (cardElement.classList.contains('left')) {
                     let translateX = (scrollDelta / maxScrollDelta) * -posX;

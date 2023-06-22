@@ -20,10 +20,13 @@
     <span class="text"> How?&nbsp; </span>
     <span class="text"> How?&nbsp; </span>
   </div>
-  <img class="hover-image"
-       [style.transform]="'translate(' + imageX + 'px, ' + imageY + 'px)'"
-       src="assets/myPhoto.jpg"
-       alt="">
+  <div
+          class="hover-image"
+          [style.transform]="'translate(' + imageX + 'px, ' + imageY + 'px)'"
+
+  >
+    <img src="assets/myPhoto.jpg" alt="">
+  </div>
 
 </div>
 <!--[style.transition]="'transform ' + transitionDuration + ' ease'"-->

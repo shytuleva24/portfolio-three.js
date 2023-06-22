@@ -51,11 +51,10 @@ h2 {
 }
 @media (max-width: 650px) {
     .hover-image {
-        margin: 10rem 30rem 157rem;
+        margin: 10rem auto 157rem;
         position: static;
-        width: 100%;
+        width: 85%;
         opacity: 1;
-        pointer-events: none;
         overflow: hidden;
         border-radius: 22px;
     }
