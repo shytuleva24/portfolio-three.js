@@ -1,5 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
-import {MouseIconService} from "../services/mouse-icon.service";
+import {MouseIconService} from "../../services/mouse-icon.service";
 
 interface Block {
   title: string;

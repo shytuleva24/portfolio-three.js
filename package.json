@@ -19,7 +19,10 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "gltf-loader": "^1.0.0",
+    "ngx-page-scroll": "^11.0.0",
+    "ngx-scrolltop": "^6.0.0",
     "rxjs": "~7.8.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "three": "^0.153.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

@@ -1,37 +1,11 @@
-<div class="scroll-container">
-  <div class="circle"
-       [style.transform]="'translate3d(' + mouseIconX + 'px, ' + mouseIconY + 'px, 0) scale(' + mouseIconScale + ')'"
-       [style.width.px]="mouseIconSize"
-       [style.height.px]="mouseIconSize"
-  ></div>
-
-
-  <div class="home-page scroll-block" #homePage>
-    <div class="canvas-overlay"></div>
-    <app-sky></app-sky>
-  </div>
-  <div class="home-content">
-    <div class="flex nav wave-text">
-      <a class="logo">olga shutyleva</a>
-      <a class="link"
-         (click)="smoothScroll()"
-         (mouseenter)="onMouseEnter()"
-         (mouseleave)="onMouseLeave()"
-      >contact</a>
-    </div>
-    <app-home></app-home>
-  </div>
-  <div class="container">
-    <app-about></app-about>
-  </div>
-  <div class="container">
-    <app-technology></app-technology>
-  </div>
-  <div class="container">
-    <app-portfolio></app-portfolio>
-  </div>
-  <app-look></app-look>
-  <div class="container" id="footer">
-    <app-footer></app-footer>
-  </div>
+<div
+        class="loader"
+        [ngClass]="{'loaded': loadingService.loadingProgress >= 100, 'loading': loadingService.loadingProgress < 100}"
+>
+  <p>{{ loadingService.loadingProgress.toFixed(0) }}</p>
+</div>
+<div
+        class="content"
+        [ngClass]="{'loaded': loadingService.loadingProgress >= 100, 'loading': loadingService.loadingProgress < 100}">
+  <app-all-site></app-all-site>
 </div>

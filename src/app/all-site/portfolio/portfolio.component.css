@@ -98,6 +98,7 @@ h2 {
 
 .line.left {
     transform: translateX(-2vw) rotate(2deg);
+    transform: translateX(2vw) rotate(-2deg);
 }
 .line.right {
     transform: translateX(2vw) rotate(-2deg);

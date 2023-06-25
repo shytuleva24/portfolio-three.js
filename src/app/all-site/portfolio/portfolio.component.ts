@@ -1,6 +1,6 @@
 import {Component, ElementRef, HostListener, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {debounceTime, Subject} from "rxjs";
-import {MouseIconService} from "../services/mouse-icon.service";
+import {MouseIconService} from "../../services/mouse-icon.service";
 
 @Component({
     selector: 'app-portfolio',

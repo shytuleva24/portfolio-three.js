@@ -1,0 +1,40 @@
+.home-page {
+    position: relative;
+}
+.home-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.darken {
+    transition: opacity 0.5s ease;
+}
+
+.home-page {
+    opacity: 1;
+}
+.container {
+    height: 100%;
+}
+.scroll-container {
+    transition: scroll-behavior 0.3s ease-in-out;
+}
+a {
+    font-weight: 700;
+    font-size: 0.8vw;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    padding: 30rem 30rem 0;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo {
+    text-transform: none;
+}
+

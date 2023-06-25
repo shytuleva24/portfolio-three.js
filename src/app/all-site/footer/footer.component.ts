@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MouseIconService} from "../services/mouse-icon.service";
+import {MouseIconService} from "../../services/mouse-icon.service";
 
 @Component({
   selector: 'app-footer',
