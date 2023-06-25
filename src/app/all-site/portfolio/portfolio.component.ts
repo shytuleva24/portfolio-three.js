@@ -38,7 +38,7 @@ export class PortfolioComponent {
             animationClass: 'left'
         },
         {
-            id: 'work 005',
+            id: 'work 003',
             name: 'Repair design',
             year: '2022',
             image: 'assets/work03.jpg',
