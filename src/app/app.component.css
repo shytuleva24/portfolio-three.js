@@ -17,17 +17,25 @@
     transition: all 0.7s ease-in-out;
     z-index: -222;
 }
+
 .loading p {
     padding: 3vw 7vw;
 }
+
 .content {
     transition: opacity .7s ease-in-out;
 }
+
 .content.loaded {
     opacity: 1;
+    height: auto;
+    overflow: auto;
 }
+
 .content.loading {
-   opacity: 0;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 .loader.loaded {
@@ -39,5 +47,6 @@
 
 .loader.loading {
     opacity: 1;
+    height: 100vh;
 }
 
