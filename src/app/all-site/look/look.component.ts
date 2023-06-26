@@ -12,7 +12,7 @@ export class LookComponent {
   transitionDuration: string = '0s'; // Длительность анимации по умолчанию
 
   moveImage(event: MouseEvent) {
-    if (this.isHovered) {
+    if (this.isHovered && window.innerWidth >= 650) {
       const marquee = event.currentTarget as HTMLElement;
       const marqueeRect = marquee.getBoundingClientRect();
       const mouseX = event.clientX - marqueeRect.left;

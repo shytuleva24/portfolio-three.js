@@ -38,3 +38,8 @@ a {
     text-transform: none;
 }
 
+@media (max-width: 650px) {
+  a {
+    font-size: 11px;
+  }
+}
