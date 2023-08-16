@@ -21,7 +21,7 @@
   animation: spinner 1s infinite linear;
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.2);
-  border-top-color: #fff; /* No se identa por orden alfabetico para que no lo sobre-escriba */
+  border-top-color: #fff;
   height: 10vw;
   margin: 0 auto 3.5em auto;
   width: 10vw;
@@ -88,13 +88,11 @@
   right: 0;
 }
 
-/* Efecto de fade en la animación de cargando */
 .loaded .animation-preloader {
   opacity: 0;
   transition: 0.3s ease-out;
 }
 
-/* Efecto de cortina */
 .loaded .loader-section.section-left {
   transform: translateX(-101%);
   transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
@@ -105,14 +103,12 @@
   transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
 }
 
-/* Animación del preloader */
 @keyframes spinner {
   to {
     transform: rotateZ(360deg);
   }
 }
 
-/* Animación de las letras cargando del preloader */
 @keyframes letters-loading {
   0%,
   75%,
@@ -128,28 +124,3 @@
   }
 }
 
-/*@media screen and (max-width: 767px) {*/
-/*  .ctn-preloader .animation-preloader .spinner {*/
-/*    height: 8em;*/
-/*    width: 8em;*/
-/*  }*/
-
-/*  !* Texto cargando *!*/
-/*  .ctn-preloader .animation-preloader .txt-loading {*/
-/*    font: bold 3.5em 'Montserrat', sans-serif;*/
-/*  }*/
-/*}*/
-
-/*@media screen and (max-width: 500px) {*/
-/*  !* Prelaoder *!*/
-/*  !* Spinner cargando *!*/
-/*  .ctn-preloader .animation-preloader .spinner {*/
-/*    height: 7em;*/
-/*    width: 7em;*/
-/*  }*/
-
-/*  !* Texto cargando *!*/
-/*  .ctn-preloader .animation-preloader .txt-loading {*/
-/*    font: bold 2em 'Montserrat', sans-serif;*/
-/*  }*/
-/*}*/

@@ -15,8 +15,4 @@ import { trigger, style, animate, transition } from '@angular/animations';
 })
 export class HomeComponent {
   title: string[] = ["I'm front-", "End", "Developer"];
-  // aboutMe: string = 'Hi, I\'m Olga and I\'m developing your sites. Tell me about your idea and I will design its mechanical heart.'
-  aboutMe: string[] = ["Hi, I'm Olga and I'm developing your sites.", "Tell me about your idea and I will", "design its mechanical heart."]
-
-
 }

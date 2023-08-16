@@ -1,13 +1,7 @@
-<!--<div-->
-<!--        class="loader"-->
-<!--        [ngClass]="{'loaded': loadingService.loadingProgress >= 100, 'loading': loadingService.loadingProgress < 100}"-->
-<!--&gt;-->
-<!--  <p>{{ loadingService.loadingProgress.toFixed(0) }}</p>-->
-<!--</div>-->
-<section>
-  <div id="preloader"
-          [ngClass]="{'loaded': loadingService.loadingProgress >= 100, 'loading': loadingService.loadingProgress < 100}"
-  >
+<section
+  [ngClass]="{'loaded': loadingService.loadingProgress >= 100, 'loading': loadingService.loadingProgress < 100}"
+>
+  <div id="preloader">
     <div id="ctn-preloader" class="ctn-preloader">
       <div class="animation-preloader">
         <div class="spinner"></div>
