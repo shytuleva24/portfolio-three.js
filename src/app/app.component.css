@@ -1,55 +1,3 @@
-/*.loader {*/
-/*    position: fixed;*/
-/*    height: 100vh;*/
-/*    width: 100%;*/
-/*    font-weight: 400;*/
-/*    font-size: 14.8vw;*/
-/*    line-height: 87.7%;*/
-/*    text-transform: uppercase;*/
-/*    text-align: right;*/
-/*    display: flex;*/
-/*    align-items: flex-end;*/
-/*    justify-content: flex-end;*/
-/*    color: white;*/
-/*    text-shadow: 3px 5px 9px rgba(0, 0, 0, 0.2);*/
-/*    letter-spacing: -5.1rem;*/
-/*    text-wrap: none;*/
-/*    transition: all 0.7s ease-in-out;*/
-/*    z-index: -222;*/
-/*}*/
-
-/*.loading p {*/
-/*    padding: 3vw 7vw;*/
-/*}*/
-
-/*.content {*/
-/*    transition: opacity .7s ease-in-out;*/
-/*}*/
-
-/*.content.loaded {*/
-/*    opacity: 1;*/
-/*    height: auto;*/
-/*    overflow: auto;*/
-/*}*/
-
-/*.content.loading {*/
-/*    opacity: 0;*/
-/*    height: 0;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*.loader.loaded {*/
-/*    opacity: 0;*/
-/*    z-index: -222;*/
-/*    height: 0;*/
-/*    width: 0;*/
-/*}*/
-
-/*.loader.loading {*/
-/*    opacity: 1;*/
-/*    height: 100vh;*/
-/*}*/
-
 .ctn-preloader {
   align-items: center;
   cursor: none;
@@ -69,8 +17,6 @@
   position: absolute;
   z-index: 100;
 }
-
-/* Spinner cargando */
 .ctn-preloader .animation-preloader .spinner {
   animation: spinner 1s infinite linear;
   border-radius: 50%;
@@ -80,8 +26,6 @@
   margin: 0 auto 3.5em auto;
   width: 10vw;
 }
-
-/* Texto cargando */
 .ctn-preloader .animation-preloader .txt-loading {
   font: bold 10vw 'Montserrat', sans-serif;
   text-align: center;
