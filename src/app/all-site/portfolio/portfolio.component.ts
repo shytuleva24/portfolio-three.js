@@ -66,25 +66,25 @@ export class PortfolioComponent {
             name: 'Testing site',
             year: '2023',
             image: 'assets/work06.jpg',
-            link: 'https://shytuleva24.github.io/portfolio-head/',
+            link: 'https://portfolio-testing-e7cfe.web.app/',
             skills: 'Angular Firebase',
             maxWidth: '41vw',
             height: '43vw',
             color: '#FFFFFF',
             animationClass: 'left'
         },
-        {
-            id: 'work 006',
-            name: 'Three.js',
-            year: '2023',
-            image: 'assets/work05.jpg',
-            link: 'https://shytuleva24.github.io/portfolio-head/',
-            skills: 'Three.js Angular',
-            maxWidth: '35vw',
-            height: '55vw',
-            color: '#FFFFFF',
-            animationClass: 'right'
-        }
+        // {
+        //     id: 'work 006',
+        //     name: 'Three.js',
+        //     year: '2023',
+        //     image: 'assets/work05.jpg',
+        //     link: 'https://shytuleva24.github.io/portfolio-head/',
+        //     skills: 'Three.js Angular',
+        //     maxWidth: '35vw',
+        //     height: '55vw',
+        //     color: '#FFFFFF',
+        //     animationClass: 'right'
+        // }
     ];
     private scrollSubject = new Subject();
     constructor(private mouseService: MouseIconService) {

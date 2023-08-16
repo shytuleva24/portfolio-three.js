@@ -19,22 +19,32 @@ export class TechnologyComponent implements OnInit {
   blocks: Block[] = [
     {
       title: 'Markup',
-      skills: ['HTML', 'CSS', 'SASS', 'SCSS', 'PUG', 'BEM'],
-      isActive: false
-    },
-    {
-      title: 'UI-Frameworks',
-      skills: ['Bootstrap 3', 'Bootstrap 4', 'Bootstrap 5'],
+      skills: ['HTML', 'CSS', 'SCSS', 'SASS', 'PUG', 'BEM'],
       isActive: false
     },
     {
       title: 'JavaScript',
-      skills: ['Angular', 'Vanilla JS', 'jQuery'],
+      skills: ['Angular', 'Vanilla JS', 'jQuery', 'TypeScript'],
       isActive: false
     },
     {
-      title: 'Development tools',
-      skills: ['GitHub', 'Webpack', 'Gulp'],
+      title: 'Graphics',
+      skills: ['Figma', 'Photoshop', 'Photopea'],
+      isActive: false
+    },
+    {
+      title: 'Build Tools',
+      skills: ['Gulp', 'Webpack'],
+      isActive: false
+    },
+    {
+      title: '3D Graphics',
+      skills: ['Three.js', 'Blender'],
+      isActive: false
+    },
+    {
+      title: 'Project Management',
+      skills: ['Asana', 'Trello', 'Jira'],
       isActive: false
     }
   ];
