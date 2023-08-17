@@ -41,11 +41,6 @@ export class TechnologyComponent implements OnInit {
       title: '3D Graphics',
       skills: ['Three.js', 'Blender'],
       isActive: false
-    },
-    {
-      title: 'Project Management',
-      skills: ['Asana', 'Trello', 'Jira'],
-      isActive: false
     }
   ];
 
